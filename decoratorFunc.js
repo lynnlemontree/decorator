@@ -10,7 +10,7 @@ function decoratorFunc(func){
     let result = new Map();
     //start decorate!!
     return function(x){
-	if (result.has(x){
+	if (result.has(x)){
 	    return result.get(x);
 	}
 	let value = func(x);
@@ -19,4 +19,4 @@ function decoratorFunc(func){
     }
 }
 let decoratedFunc = decoratorFunc(hardJob)
-decoratedFunc(1)
+console.log(decoratedFunc(1))
